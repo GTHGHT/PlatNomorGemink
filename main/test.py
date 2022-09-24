@@ -5,10 +5,11 @@ import pandas as pd
 import os
 
 df = pd.DataFrame(columns=['nama', 'fitur', 'segi'])
-folder_dir = "C:/Users/super/OneDrive/Documents/GitHub/PlatNomorGemink/img"
+folder_dir = "../img"
 for namagambar in os.listdir(folder_dir):
     if (namagambar.endswith(".jpg")): 
-        # FIRST STEP: Load iamge, grayscale, adaptive threshold
+        # FIRST STEP: 
+        # Load image, grayscale, adaptive threshold
         image = cv2.imread('img/'+ namagambar)
         image = imutils.resize(image, width=1000, height=1000)
         gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
